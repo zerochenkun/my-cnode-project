@@ -20,6 +20,8 @@
 
 <style scoped>
   .header{
+    display: flex;
+    text-align: center;
     background-color:#5a5555;
     height: 40px;
   }
@@ -27,14 +29,15 @@
     max-width:120px;
     margin-left:50px;
   }
+
   ul{
     list-style:none;
     float:right;
-    vertical-align:middle;
   }
   li{
     display:inline-block;
-    padding: 2px 15px;
+    padding-right:15px;
+    padding-left:15px;
   }
   a{
     text-decoration:none;
