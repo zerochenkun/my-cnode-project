@@ -1,4 +1,3 @@
-<!--eslint ignore-->
 <template>
   <div>
     <div class="loading" v-if="isLoading">
@@ -13,7 +12,7 @@
           <span>问答</span>
           <span>招聘</span>
         </div>
-        <li v-for="post in posts" class="PostList" :key="post in posts">
+        <li v-for="post in posts" class="PostList">
           <!--头像-->
           <img :src="post.author.avatar_url" alt="头像" />
           <!-- 帖子的分类 -->
@@ -36,6 +35,7 @@
 </template>
 
 <script>
+
 export default {
   name: "Postlist",
   data() {
