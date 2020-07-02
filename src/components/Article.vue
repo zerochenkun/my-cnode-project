@@ -18,15 +18,15 @@
         <div v-html="post.content" class="topic_content"></div>
       </div>
       <div id="reply">
-        <div class="topbar">回复</div>
+        <div class="topbar">回复&nbsp;{{post.replies.length}}</div>
         <div v-for="(reply,index)  in post.replies" class="replySec">
           <div class="replyUp">
             <router-link :to="{
-          name:'user_info',
-          params:{
-            name:reply.author.loginname
-          }
-          }">
+                name:'user_info',
+                params:{
+                  name:reply.author.loginname
+                }
+              }">
               <img :src="reply.author.avatar_url" alt="">
             </router-link>
             <router-link :to="{

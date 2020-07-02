@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Article from "../components/Article"
 import Postlist from "../components/Postlist"
+import UserInfo from "../components/UserInfo"
 Vue.use(VueRouter)
 // ======↓↓↓↓↓↓↓↓↓ vue 自带 ↓↓↓↓↓↓↓↓↓======
 //   const routes = [
@@ -43,6 +44,13 @@ export default new VueRouter({
       path:'/topic/:id',
       components:{
         main:Article
+      }
+    },
+    {
+      name:'user_info',
+      path:'/userinfo/:name',
+      components:{
+        main:UserInfo
       }
     }
   ]

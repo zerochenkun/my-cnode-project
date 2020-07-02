@@ -15,7 +15,7 @@
         </div>
         <li v-for="post in posts" class="PostList">
           <!--头像-->
-          <img :src="post.author.avatar_url" alt="头像"/>
+          <img :src="post.author.avatar_url" alt="avatar"/>
           <!-- 帖子的分类 -->
           <span
             :class="[{put_good:(post.good === true),put_top:(post.top === true),
