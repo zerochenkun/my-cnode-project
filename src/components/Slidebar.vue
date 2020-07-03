@@ -15,7 +15,7 @@
     <div class="recent_topics">
       <div class="topbar">作者最近主题</div>
       <ul>
-        <li v-for="item in limit5(userinfo.recent_topics)">
+        <li v-for="item in limit5(userinfo.recent_topics)" @click="refresh">
           <router-link :to="{
             name:'post_content',
             params:{
@@ -31,7 +31,7 @@
     <div class="recent_replies">
       <div class="topbar">作者最近回复</div>
       <ul>
-        <li v-for="item in limit5(userinfo.recent_replies)">
+        <li v-for="item in limit5(userinfo.recent_replies)"  @click="refresh">
           <router-link :to="{
             name:'post_content',
             params:{
@@ -57,6 +57,9 @@
       }
     },
     methods: {
+      refresh(){
+        this.$router.go(0)
+      },
       getData() {
         this.$http.get(`https://cnodejs.org/api/v1/user/${this.$route.params.name}`)
           .then(res => {
