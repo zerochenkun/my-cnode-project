@@ -26,7 +26,7 @@
           <span class="reply_count">{{post.reply_count}}</span>
           <span class="allcount">/{{post.visit_count}} </span>
           <!--标题-->
-          <router-link :to="{name:'post_content',params:{id:post.id}}">
+          <router-link :to="{name:'post_content',params:{id:post.id,name:post.author.loginname}}">
             <span style="padding-left: 1em">{{post.title}}</span>
           </router-link>
           <!-- 最终时间 -->

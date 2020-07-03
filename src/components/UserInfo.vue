@@ -14,7 +14,7 @@
         <h4>回复的主题</h4>
         <li v-for="item in userinfo.recent_replies">
           <router-link :to="{name:'post_content',params:{
-            id:item.id,
+            id:item.id
           }}">
             {{item.title}}
           </router-link>

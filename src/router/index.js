@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Article from "../components/Article"
 import Postlist from "../components/Postlist"
 import UserInfo from "../components/UserInfo"
+import Slidebar from "../components/Slidebar"
+
 Vue.use(VueRouter)
 // ======↓↓↓↓↓↓↓↓↓ vue 自带 ↓↓↓↓↓↓↓↓↓======
 //   const routes = [
@@ -41,9 +43,10 @@ export default new VueRouter({
     },
     {
       name:'post_content',
-      path:'/topic/:id',
+      path:'/topic/:id&author=:name',
       components:{
-        main:Article
+        main:Article,
+        slideBar:Slidebar
       }
     },
     {
